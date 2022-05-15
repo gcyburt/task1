@@ -1,5 +1,5 @@
-import requests
+import json
 
-url = 'https://openx.com/sellers.json'
-r = requests.get(url, allow_redirects=True)
-open('sellers.json', 'wb').write(r.content)
+# geting JSON file from the provided page and storing whole struct in sellersDeserialized
+with open("sellers.json", "r") as read_file:
+    sellersDeserialized = json.load(read_file)
